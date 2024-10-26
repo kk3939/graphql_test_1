@@ -2,10 +2,13 @@
   "name": "graphql_test_1",
   "version": "1.0.0",
   "description": "test of graphql",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
     "lint": "npx oxlint@latest",
     "lint:fix": "npx oxlint@latest --fix",
+    "server": "node --loader ts-node/esm src/server.ts",
+    "client": "node --loader ts-node/esm src/client.ts",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -16,11 +19,20 @@
   "author": "kyo9bo <kyo51310@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "graphql": "^16.9.0"
+    "@apollo/client": "^3.11.8",
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.21.1",
+    "graphql": "^16.9.0",
+    "reflect-metadata": "^0.2.2",
+    "type-graphql": "^2.0.0-rc.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "oxlint": "^0.10.2"
+    "oxlint": "^0.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }
