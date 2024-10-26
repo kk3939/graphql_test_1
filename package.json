@@ -5,8 +5,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "lint": "npx oxlint@latest",
-    "lint:fix": "npx oxlint@latest --fix",
+    "lint": "biome lint src/*.ts",
+    "lint:fix": "biome check --write src/*.ts",
     "server": "node --loader ts-node/esm src/server.ts",
     "client": "node --loader ts-node/esm src/client.ts",
     "prepare": "husky"
@@ -27,11 +27,11 @@
     "type-graphql": "^2.0.0-rc.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/express": "^5.0.0",
     "@types/node": "^22.8.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "oxlint": "^0.10.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
