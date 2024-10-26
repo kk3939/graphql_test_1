@@ -9,6 +9,9 @@ const main = async () => {
 		cache: new InMemoryCache(),
 	});
 	try {
+		// 今回はClient.queryやClient.mutateを使って、GraphQLのクエリやミューテーションを実行する。
+		// React環境であれば、useQueryやuseMutationを使う。
+
 		// データの取得
 		client
 			.query({
