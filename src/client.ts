@@ -1,5 +1,7 @@
 // GraphQLを呼び出す側のサンプルコード
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+// cjsを使っている理由
+// https://stackoverflow.com/questions/71400221/syntaxerror-named-export-apolloclient-not-found
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client/core/core.cjs";
 
 const main = async () => {
 	const client = new ApolloClient({
